@@ -1,0 +1,19 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 1)">
+  template="<img src="https://media.giphy.com/media/3y0oCOkdKKRi0/giphy.gif" />"
+</ngx-spinner>
+
+<div class="container-fluid">
+  <h1>List of Plants</h1>
+  <div>
+    <button (click)="resetDatabase($event)" class="btn btn-primary">
+      Reset Database
+    </button>
+  </div>
+
+  <div class="container-fluid">
+    <plant-manager
+      [model]="pData"
+      *ngFor="let pData of plantsData"
+    ></plant-manager>
+  </div>
+</div>

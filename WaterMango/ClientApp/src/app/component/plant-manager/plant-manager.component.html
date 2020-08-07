@@ -1,0 +1,78 @@
+<div [ngClass]="plant.waterAlert ? 'alert alert-danger' : ''">
+  <div style="position: relative;">
+    <!-- <ngx-spinner
+      bdOpacity="0.9"
+      bdColor="#f4f4f9"
+      size="medium"
+      color="#1010ee"
+      type="ball-clip-rotate"
+      [fullScreen]="false"
+    >
+    </ngx-spinner> -->
+
+    <div class="row">
+      <div class="col-sm-4">
+        <img [src]="plant.imageUrl" alt="avatar" class="col-12" />
+      </div>
+      <div class="col-sm-4">
+        <h5 class="m-b-0">
+          <strong>{{ plant.name }}</strong>
+        </h5>
+        <small class="m-b-0">{{ plant.location }}</small>
+        <div>
+          Watering status :{{
+            plant.isWatering
+              ? " -- Watering Now --"
+              : plant.wateredLastTime
+              ? " Last Watering at " + (plant.wateredLastTime | date: "short")
+              : " do not know when it watered last time."
+          }}
+        </div>
+        <div>
+          <button
+            (click)="toggleWateringClick($event)"
+            class="btn"
+            [ngClass]="
+              toggleBtnDisabled
+                ? 'btn-secondary'
+                : !plant.isWatering
+                ? 'btn-primary'
+                : 'btn-danger'
+            "
+            [disabled]="toggleBtnDisabled"
+          >
+            {{ btnWateringLabel }}
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <table
+          class="table"
+          [hidden]="
+            !(plant.wateringHistory && plant.wateringHistory.length > 0)
+          "
+        >
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">Duration(sec)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let hItem of plant.wateringHistory">
+              <td>{{ hItem.time | date: "short" }}</td>
+              <td>{{ hItem.duration }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div
+          [hidden]="plant.wateringHistory && plant.wateringHistory.length > 0"
+          class="alert alert-info"
+          role="alert"
+        >
+          No watering records
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaterMango", "WaterMango\WaterMango.csproj", "{BEC0EBB3-2E21-4325-BC21-ACBF2272AB61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEC0EBB3-2E21-4325-BC21-ACBF2272AB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEC0EBB3-2E21-4325-BC21-ACBF2272AB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEC0EBB3-2E21-4325-BC21-ACBF2272AB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEC0EBB3-2E21-4325-BC21-ACBF2272AB61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {333D937D-E837-449E-84AD-55A4149A8EAE}
+	EndGlobalSection
+EndGlobal
